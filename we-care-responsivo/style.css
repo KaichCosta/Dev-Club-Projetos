@@ -83,3 +83,31 @@ p {
     line-height: 34px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 720px) {
+    header {
+        display: none;
+    }
+
+    img{
+        margin: 149px 22px 0px 14px;
+        width: 354px;
+        height: 317px;
+    }
+    h1 {
+        font-size: 50px;
+        line-height: normal;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        display: none;
+    }
+}
