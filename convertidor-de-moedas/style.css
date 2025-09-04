@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;   
+}
+
+body {
+    background-color: #8A51FC;
+}
+
+#gif {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+main {
+    width: 375px;
+    height: 712px;
+    border-radius: 20px;
+    background: #F4F4F4;
+    display: block;
+    margin: auto;
+    padding: 44px 24px 23px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+
+select, input {
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    margin-bottom: 24px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-left: 12px;
+}
+
+button {
+    width: 327px;
+    height: 48px;
+    border-radius: 5px;
+    background: #772FD3;
+    color: #FFF;
+    font-size: 18px;
+
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 35px;
+}
+
+section {
+    width: 327px;
+    height: 276px;
+    border-radius: 20px;
+    border: 1px solid #772FD3;
+
+}
+
+#info-converter, #info-convertida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 0;
+}
+
+#seta {
+    display: block;
+    margin: auto;
+}
+
+.pais-moeda {
+    width: 44px;
+    height: 44px;
+}
+
+.moeda {
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 3px;
+}
+
+.valor {
+    color: #555;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+}
+#seta {
+    width: 35px;
+    height: 49.939px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#creditos {
+    color: #FFF;
+    font-size: 12px;
+}
+
+#creditos a {
+    color: #24d301;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    #gif {
+    width: 200px;
+    height: 200px;
+    }
+}
