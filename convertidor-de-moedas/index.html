@@ -10,47 +10,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icone.png"/>
     <title>Convertidor</title>
 </head>
 <body>
     <img src="assets/logo.gif" alt="gif-logo" id="gif">
     <main>
-        <form>
-            <label >Converter <b>de</b> 
-                <select >
-                    <option >R$ Real Brasileiro</option>
-                </select>
-            </label>
+    <form id="formulario" name="formulario">
+        <label for="moeda-de">Converter <b>de</b> 
+            <select id="moeda-de" name="moeda-de">
+                <option>R$ Real Brasileiro</option>
+            </select>
+        </label>
 
-            <label for="input">Converter <b>para</b> </label>
-                <select >
-                    <option >U$ Dólar Americano</option>
-                </select>
-            </label>
+        <label for="moeda-para">Converter <b>para</b> 
+            <select id="moeda-para" name="moeda-para">
+                <option>U$ Dólar Americano</option>
+            </select>
+        </label>
 
-            <label> Valor </label>
-                <input placeholder="R$ 500,00"></input>
-            </label>
+        <label for="valor">Valor 
+            <input id="valor" name="valor" placeholder="R$ 500,00">
+        </label>
 
-            <button>Converter</button>
-        </form>
+        <button id="Converter">Converter</button>
+    </form>
 
-        <section>
-            <div id="info-converter">
-                <img src="assets/brasil.png" alt="moeda-para-converter" class="pais-moeda">
-                <p class="moeda">Real</p>
-                <p class="valor">R$ 0,00</p>
-            </div>
+    <section>
+        <div id="info-converter">
+            <img src="assets/brasil.png" alt="moeda-para-converter" class="pais-moeda">
+            <p class="moeda">Real</p>
+            <p class="valor">R$ 0,00</p>
+        </div>
 
-            <img src="assets/seta.png" alt="seta=para-baixo" id="seta">
-            
-            <div id="info-convertida">
-                <img src="assets/estados-unidos.png" alt="moeda-convertida" class="pais-moeda">
-                <p class="moeda">Dólar</p>
-                <p class="valor">R$ 0,00</p>
-            </div>
+        <img src="assets/seta.png" alt="seta=para-baixo" id="seta">
+        
+        <div id="info-convertida">
+            <img src="assets/estados-unidos.png" alt="moeda-convertida" class="pais-moeda">
+            <p class="moeda">Dólar</p>
+            <p class="valor">R$ 0,00</p>
+        </div>
 
-        </section>    
+    </section>    
 
     </main>
 
