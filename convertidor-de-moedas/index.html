@@ -25,7 +25,8 @@
 
         <label for="moeda-para">Converter <b>para</b> 
             <select id="moeda-para" name="moeda-para">
-                <option>U$ Dólar Americano</option>
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
             </select>
         </label>
 
@@ -39,16 +40,16 @@
     <section>
         <div id="info-converter">
             <img src="assets/brasil.png" alt="moeda-para-converter" class="pais-moeda">
-            <p class="moeda">Real</p>
-            <p class="valor">R$ 0,00</p>
+            <p class="nome-moeda">Real</p>
+            <p id="valor-inicial" class="valor">R$ 0,00</p>
         </div>
 
         <img src="assets/seta.png" alt="seta=para-baixo" id="seta">
         
         <div id="info-convertida">
             <img src="assets/estados-unidos.png" alt="moeda-convertida" class="pais-moeda">
-            <p class="moeda">Dólar</p>
-            <p class="valor">R$ 0,00</p>
+            <p  class="nome-moeda-convertida">Dólar</p>
+            <p id="valor-final" class="valor">R$ 0,00</p>
         </div>
 
     </section>    

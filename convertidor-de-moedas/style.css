@@ -91,7 +91,7 @@ section {
     height: 44px;
 }
 
-.moeda {
+.nome-moeda, .nome-moeda-convertida {
     color: #777;
     font-size: 14px;
     font-weight: 400;
