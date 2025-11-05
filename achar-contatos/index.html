@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        body {
+            background-color: lightcyan;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        img {
+            width: 240px;
+            height: auto;
+        }
+
+        h1 {
+            color: rgb(3, 113, 222);
+            font-size: 32px;
+        }
+        
+        input {
+            border-radius: 5px;
+            border-color: rgb(94, 212, 255);
+        }
+
+        button {
+            border-radius: 5px;
+            border-color: rgb(3, 113, 222);
+            background-color: rgb(94, 212, 255);
+        }
+
+        button:hover {
+            background-color: rgb(3, 113, 222);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Busca de Contatos</h1>
+        <img src="contatos-logo.png" alt="logo contatos">
+        <input placeholder="Digite o nome" type="text">
+        <button>Procurar Contato</button>
+        <p>fthuftyjty</p>
+    </main>
+</body>
+<script>
+    
+    let input = document.querySelector("input")
+
+    const button = document.querySelector("button")
+    button.addEventListener("click", buscarContato)
+    let p = document.querySelector("p")
+    
+    const contatos = [
+        { nome: "Ana", telefone: "(18) 91234-5678" },
+        { nome: "Bruno", telefone: "(31) 92345-6789" },
+        { nome: "Carla", telefone: "(22) 93456-7890" },
+        { nome: "Daniel", telefone: "(18) 94567-8901" },
+        { nome: "Eva", telefone: "(12) 95678-9012" }
+    ]
+
+    function buscarContato() {
+        console.log(input.value)
+        for (let i = 0; i < contatos.length; i++) {
+            if (input.value.toLowerCase() == contatos[i].nome.toLowerCase()) {
+                p.innerHTML = `Telefone de ${contatos[i].nome}: ${contatos[i].telefone}`
+                break
+            }
+            else {
+                p.innerHTML = "Contato não encontrado"
+            }
+        }
+    }
+
+</script>
+</html>
