@@ -1,63 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    //valorPedra = 0
-    //valorPapel = 1
-    //valorTesoura = 2
+const resultado = document.querySelector('#resultado')
+const pontoJogador = document.querySelector('#ponto-jogador')
+const pontoRobo = document.querySelector('#ponto-robo')
+const pontoEmpate = document.querySelector('#ponto-empate')
 
-    const escolheuPedra = () => {
-        const escolhaJogador = 0
-        console.log('escolha jogador = '+escolhaJogador)
+let contador_pontoJogador = 0
+let contador_pontoRobo = 0
+let contador_pontoEmpate = 0
 
-        let escolhaRobo = Math.floor(Math.random() * 3);
-            console.log('escolha robo = '+escolhaRobo)
+const jogadaJogador = (escolhaJogador) => {
+    iniciarJogo(escolhaJogador, jogadaRobo())
+}
 
-        if (escolhaJogador == escolhaRobo) // os dois escolheram pedra
-            console.log('empate')
+const jogadaRobo = () => {
+    const opcoes = ['pedra', 'papel', 'tesoura']
+    const escolhaRobo = Math.floor(Math.random()*3)
+    return opcoes[escolhaRobo]
+}
 
-        else if (escolhaRobo = 1) // robô escolheu papel   
-            console.log('O robo ganhou')
+const iniciarJogo = (jogador, robo) => {
+    console.log('Jogador escolheu = '+ jogador+' / Robo escolheu = '+ robo)
 
-        else // robô escolheu tesoura 
-            console.log('vc ganhou')
+    document.querySelector('#resultado').style.display = "block"
+
+    if (jogador === robo ) {
+        resultado.innerHTML = "Empate 😐"
+        contador_pontoEmpate ++
+        pontoEmpate.innerHTML = contador_pontoEmpate
+
+    }else if (
+        jogador==='pedra' && robo === 'tesoura' ||
+        jogador==='papel' && robo === 'pedra' ||
+        jogador==='tesoura' && robo === 'papel'
+    ) {
+        resultado.innerHTML = "Parabéns! Você Ganhouu 😀"
+        contador_pontoJogador ++
+        pontoJogador.innerHTML = contador_pontoJogador
+    }else {
+        resultado.innerHTML = "O Robô ganhouu 😭"
+        contador_pontoRobo ++
+        pontoRobo.innerHTML = contador_pontoRobo
     }
 
-    const escolheuPapel = () => {
-        const escolhaJogador = 1
-        console.log('escolha jogador = '+escolhaJogador)
-
-        let escolhaRobo = Math.floor(Math.random() * 3);
-            console.log('escolha robo = '+escolhaRobo)
-
-        if (escolhaJogador == escolhaRobo) // os dois escolheram papel
-            console.log('empate')
-
-        else if (escolhaRobo == 2) // robô escolheu tesoura
-            console.log('O robo ganhou')
-
-        else //robô escolheu pedra
-            console.log('vc ganhou')
-    }
-
-    const escolheuTesoura = () => {
-        const escolhaJogador = 2
-        console.log('escolha jogador = '+escolhaJogador)
-
-        let escolhaRobo = Math.floor(Math.random() * 3);
-            console.log('escolha robo = '+escolhaRobo)
-
-        if (escolhaJogador == escolhaRobo) // os dois escolheram tesourapapel
-            console.log('empate')
-
-        else if (escolhaRobo == 0) // robô escolheu pedra
-            console.log('O robo ganhou')
-
-        else //robô escolheu papel
-            console.log('vc ganhou')
-    }
-
-    document.getElementById('pedra').addEventListener('click', () => escolheuPedra());
-
-    document.getElementById('papel').addEventListener('click', ()=> escolheuPapel())
-
-    document.getElementById('tesoura').addEventListener('click', () => escolheuTesoura())
-
-});
+}
