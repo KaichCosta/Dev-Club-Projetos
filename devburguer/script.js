@@ -1,0 +1,46 @@
+const botaoForEach = document.querySelector('#foreach');
+const botaoMap = document.querySelector('#map');
+const botaoReduce = document.querySelector('#reduce');
+const botaoFilter = document.querySelector('#filter');
+
+cards = document.querySelector('main');
+let lista = ''
+
+opcoesMenu.forEach((produto) => {
+    lista += `
+        <div class="card">
+            <img src="${produto.src}">
+            <div class="descricao-card">
+                <h2>${produto.nome}</h2>
+                <p class="valor">R$ ${produto.preco.toFixed(2)}</p>
+            </div>
+        </div>
+    `;
+})
+
+botaoForEach.addEventListener('click', () => {
+    cards.innerHTML = lista
+})
+
+botaoMap.addEventListener('click', () => {
+    const cardsComDesconto = opcoesMenu.map((produto) => {
+        return `
+            <div class="card">
+                <img src="${produto.src}">
+                <div class="descricao-card">
+                    <h2>${produto.nome}</h2>
+                    <p class="valor">R$ ${produto.preco * 0.9.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    cards.innerHTML = cardsComDesconto.join('');
+});
+
+
+
+
+
+
+

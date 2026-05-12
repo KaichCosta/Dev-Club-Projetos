@@ -81,7 +81,7 @@ main {
 }
 
 .card {
-    width: 270px;
+    width: 320px;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -110,7 +110,7 @@ main {
 }
 
 .descricao-card {
-    width: 270px;
+    width: 320px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -139,7 +139,7 @@ footer {
     nav p, .btn {font-size: 14px; padding: 10px;}
 }
 
-@media screen and (min-width: 620px) and (max-width: 900px) {
+@media screen and (min-width: 726px) and (max-width: 900px) {
     main {
         flex-direction: row;
         flex-wrap: wrap;
