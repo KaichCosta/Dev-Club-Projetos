@@ -121,9 +121,38 @@ main {
 .descricao-card h2 {font-weight: 400; color: #001;}
 
 .descricao-card p {
+    font-size: 20px;
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--cor3);
+}
+
+.soma-card {
+    padding: 10px;
+    text-align: center;
+    margin: 40vh 0 0 0;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #e38519ac;
+    border-radius: 20px;
+    border-color: var(--cor3);
+    border: solid var(--cor3) 2px;
+    display: flex;
+    backdrop-filter: blur(2px);
+    margin-bottom: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+.soma-card h2 {
+    color: #001;
+    margin: auto;
+}
+
+.soma-card p {
+    color: var(--cor3);
+    margin: auto;
+    font-size: 20px;
 }
 
 footer {

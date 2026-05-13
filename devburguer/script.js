@@ -38,6 +38,19 @@ botaoMap.addEventListener('click', () => {
     cards.innerHTML = cardsComDesconto.join('');
 });
 
+botaoReduce.addEventListener('click', () => {
+    const somarCards = opcoesMenu.reduce((acumulador, valorAtual) => acumulador + valorAtual.preco, 0);
+    const somaCard = `
+        <div class="soma-card">
+            <h2> O Total da Soma de todos os Sanduíches é</h2>
+            <p class="valor">R$ ${somarCards.toFixed(2)}</p>
+        </div>
+    `;
+    cards.innerHTML = somaCard;
+});
+
+
+
 
 
 
