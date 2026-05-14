@@ -24,12 +24,13 @@ botaoForEach.addEventListener('click', () => {
 
 botaoMap.addEventListener('click', () => {
     const cardsComDesconto = opcoesMenu.map((produto) => {
+        const calculoComDesconto = produto.preco * 0.9
         return `
             <div class="card">
                 <img src="${produto.src}">
                 <div class="descricao-card">
                     <h2>${produto.nome}</h2>
-                    <p class="valor">R$ ${produto.preco * 0.9.toFixed(2)}</p>
+                    <p class="valor">R$ ${calculoComDesconto.toFixed(2)}</p>
                 </div>
             </div>
         `;
@@ -49,11 +50,18 @@ botaoReduce.addEventListener('click', () => {
     cards.innerHTML = somaCard;
 });
 
+botaoFilter.addEventListener('click', () => {
+    const veganoCards = opcoesMenu.filter(produto => produto.vegano === true).map((produto) => {
+        return `
+            <div class="card">
+                <img src="${produto.src}">
+                <div class="descricao-card">
+                    <h2>${produto.nome}</h2>
+                    <p class="valor">R$ ${produto.preco.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    });
 
-
-
-
-
-
-
-
+    cards.innerHTML = veganoCards.join('');
+});
